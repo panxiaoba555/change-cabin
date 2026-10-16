@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>嫦娥姐姐的月光快乐小屋</title>
+    <style>
+        /* CSS：让网页充满国风浪漫感 */
+        body {
+            background: linear-gradient(135deg, #1a0933, #3d1466);
+            color: #e0b3ff;
+            font-family: "Microsoft YaHei", sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .cabin-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #ba7fff;
+            border-radius: 15px;
+            display: inline-block;
+            padding: 30px;
+            box-shadow: 0 0 20px #ba7fff;
+        }
+        button {
+            background-color: #ba7fff;
+            color: #1a0933;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover { background-color: #d1a3ff; }
+    </style>
+</head>
+<body>
+
+    <div class="cabin-card">
+        <h1>🌙 嫦娥姐姐的月光快乐小屋</h1>
+        <p>“夜晚的太阳，保护属于它的人。”</p>
+
+        <!-- 这里以后可以放真正的精美精美游戏立绘 -->
+        <div style="font-size: 50px; margin: 20px;">🌙✨🐇</div>
+
+        <h3 id="fav-status">💖 嫦娥好感度: 50</h3>
+        <button onclick="addFavor()">与嫦娥姐姐互动聊天</button>
+    </div>
+
+    <script>
+        // JavaScript：让好感度按钮真正能点击加分
+        let favor = 50;
+        function addFavor() {
+            favor += 5;
+            if(favor > 100) favor = 100;
+            document.getElementById('fav-status').innerText = "💖 嫦娥好感度: " + favor;
+            alert("嫦娥姐姐对你微微一笑，好感度提升了！");
+        }
+    </script>
+</body>
+</html>
